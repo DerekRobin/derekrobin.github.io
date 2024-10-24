@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:700|Source%20Serif%20Pro:400');
+
+body {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.521rem; /* 72.32px */}
+
+h2 {font-size: 3.197rem; /* 51.2px */}
+
+h3 {font-size: 2.261rem; /* 36.16px */}
+
+h4 {font-size: 1.599rem; /* 25.6px */}
+
+h5 {font-size: 1.131rem; /* 18.08px */}
+
+small {font-size: 0.566rem; /* 9.12px */}
+
+:root[data-theme="light"] {
+    --text: #1f1f1f;
+    --background: #e4e9f6;
+    --primary: #4a638c;
+    --secondary: #97adc3;
+    --accent: #6457a2;
+  }
+  :root[data-theme="dark"] {
+    --text: #e0e0e0;
+    --background: #090e1b;
+    --primary: #738cb5;
+    --secondary: #3c5268;
+    --accent: #695da8;
+  }
