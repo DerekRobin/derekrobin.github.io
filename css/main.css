@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:700|Source%20Serif%20Pro:400');
 
+/* light theme */
+html,
+html[data-theme="light"] {
+  color-scheme: light;
+  --text: #1f1f1f;
+  --background: #e4e9f6;
+  --primary: #4a638c;
+  --secondary: #97adc3;
+  --accent: #6457a2;
+}
+
+/* dark theme */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --text: #e0e0e0;
+  --background: #090e1b;
+  --primary: #738cb5;
+  --secondary: #3c5268;
+  --accent: #695da8;
+}
+
 body {
   font-family: 'Source Sans Pro';
   font-weight: 400;
@@ -23,18 +44,3 @@ h4 {font-size: 1.599rem; /* 25.6px */}
 h5 {font-size: 1.131rem; /* 18.08px */}
 
 small {font-size: 0.566rem; /* 9.12px */}
-
-:root[data-theme="light"] {
-    --text: #1f1f1f;
-    --background: #e4e9f6;
-    --primary: #4a638c;
-    --secondary: #97adc3;
-    --accent: #6457a2;
-  }
-  :root[data-theme="dark"] {
-    --text: #e0e0e0;
-    --background: #090e1b;
-    --primary: #738cb5;
-    --secondary: #3c5268;
-    --accent: #695da8;
-  }
