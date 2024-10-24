@@ -21,14 +21,30 @@ html[data-theme="dark"] {
   --accent: #695da8;
 }
 
+/* Dark theme (system preference) */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    color-scheme: dark;
+    --text: #e0e0e0;
+    --background: #090e1b;
+    --primary: #738cb5;
+    --secondary: #3c5268;
+    --accent: #695da8;
+  }
+}
+
 body {
   font-family: 'Source Sans Pro';
   font-weight: 400;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Oswald';
   font-weight: 700;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 html {font-size: 100%;} /* 16px */
