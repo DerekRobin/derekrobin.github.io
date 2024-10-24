@@ -36,6 +36,7 @@ html[data-theme="dark"] {
 body {
   font-family: 'Source Sans Pro';
   font-weight: 400;
+  margin:0 auto;
   color: var(--text);
   background-color: var(--background);
 }
