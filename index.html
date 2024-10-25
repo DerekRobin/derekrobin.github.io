@@ -1,27 +1,136 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://kit.fontawesome.com/9cb30fd9aa.js" crossorigin="anonymous"></script>
+<script>
+    function topNavClassName() {
+      var x = document.getElementById("navbar");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
 
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Derek Robinson">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derek Robinson</title>
-  </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Derek Robinson">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Derek Robinson</title>
+    </head>
 
 
-  <body>
-    <div>
-        <div>
-            <div style="max-width: 50%;">
+    <body>
+        <div id="navbar" class="topnav">
+            <div class="title">Derek Robinson</div>
+            <div class="links">
+                <a class="nav-btn" href="#about">About</a>
+                <a class="nav-btn" href="#skills">Skills</a>
+                <a class="nav-btn" href="#experience">Experience</a>
+                <a class="nav-btn" href="#publications">Publications</a>
+                <a href="javascript:void(0);" class="icon" onclick="topNavClassName()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </div> 
+        <div id="about" class="flex-grid">
+            <div class="col">
                 <h2>ABOUT ME</h2>
             </div>
-            <div style="max-width: 50%;">
+            <div class="col">
                 <h3>Hi, my name is Derek, and I am a data analyst with a background in software research based in Victoria, BC.</h3>
-                <p>I like to solve problems and uncover answers through quantitative or qualitative methodologies. Currently, I'm exploring machine learning and data visualization. While I am not programming, I enjoy making music, generative video synthesis, and playing video games. </p>
+                <p>I like to solve problems and uncover answers through quantitative or qualitative methodologies. Currently, I'm learning more about machine learning, data visualization, and a bit of web development. While I am not programming, I enjoy making music, generative video synthesis, and playing video games.</p>
+                <div class="container">
+                    <button class="button" type="button">
+                            Download resume
+                            <span style="padding-left: 6px;">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </span>
+                    </button>
+                    <button class="social-button" type="button">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                    </button>
+                    <button class="social-button" type="button">
+                            <i class="fa-brands fa-github"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-  </body>
+        <hr>
+        <div id="skills" class="flex-grid">
+            <div class="col">
+                <h2>MY SKILLS</h2>
+            </div>
+            <div class="col">
+                <p>Ofer the course of my academic and professional career I have picked up a multitude of skills inlcuding:</p>
+                <ul class="two-column">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>GIT</li>
+                    <li>Technical Writing</li>
+                    <li>Data communication</li>
+                    <li>LaTeX</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div id="experience" class="flex-grid">
+            <div class="col">
+                <h2>MY RECENT EXPERIENCE</h2>
+            </div>
+            <div class="col">
+                <div><b>Data Analyst at Substance UVic</b></div>
+                <div>September 2023 &mdash; Present</div>
+                <ul>
+                    <li>Creation of analytics and reporting products such as weekly, monthly, and annual reports</li>
+                    <li>Creation of ad-hoc reports and presentations for external stakeholders including provincial health authorities</li>
+                    <li>Data cleaning of both qualitative and quantitative data to ensure completeness and accuracy</li>
+                    <li>Development and maintenance of python reporting scripts and SQL queries</li>
+
+                </ul>
+                <div><b>Research Assistant at The CHISEL Group</b></div>
+                <div>September 2021 &mdash; August 2023</div>
+                <ul>
+                    <li>Designing and conducting qualitative research on user interfaces, user experience, and human-computer interaction</li>
+                    <li>Dashboard development using Python and the Plotly Dash library</li>
+                    <li>Quantitative and exploratory data analysis using Python and SQL</li>
+                    <li>Acquisition, processing, and analysis of open source Python project data</li>
+                    <li>Bayesian inference and analysis using R and RStan</li>
+                    <li>Academic writing and correspondence</li>
+                </ul>
+                <div><b>Research Programmer at The CHISEL Group</b></div>
+                <div>May 2020 &mdash; August 2021</div>
+                <ul>
+                    <li>Devising a qualitative research plan to study debugging strategies in Jupyter Notebooks</li>
+                    <li>Development of study materials including interview guides and Python Jupyter Notebooks containing data exploration and visualization code</li>
+                    <li>Analyzing qualitative video data using ATLAS.ti 8</li>
+                    <li>Academic writing and correspondence</li>            
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div id="publications" class="flex-grid">
+            <div class="col">
+                <h2>PUBLICATIONS</h2>
+                <ul>
+                    <li><a href="https://dl.acm.org/doi/abs/10.1145/3524610.3529156">Error identification strategies for Python Jupyter notebooks</a> - ICPC 2022</li>
+                    <li><a href="https://dl.acm.org/doi/abs/10.1145/3524610.3527871">Two approaches to survival analysis of open source Python projects</a> - ICPC 2022</li>
+                    <li><a href="https://www.emerald.com/insight/content/doi/10.1108/DHS-01-2022-0005/full/html">A distributed model to expand the reach of drug checking</a> - Drugs, Habits and Social Policy 23.3 (2022)</li>
+                    <li><a href="https://dl.acm.org/doi/10.1109/ICSE48619.2023.00123">Autonomy Is An Acquired Taste: Exploring Developer Preferences for GitHub Bots</a> - ICSE 2023</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </body>
+    
+    <footer>
+        Copyright &copy; 
+        <span class="currentyear" style="color: var(--text);">
+            <script>
+                document.write(new Date().getFullYear())
+            </script> 
+            Derek Robinson
+        </span>
+    </footer>
 </html>

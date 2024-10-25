@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:700|Source%20Serif%20Pro:400');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700|Open%20Sans:400');
 
+/* THEMES */
 /* light theme */
 html,
 html[data-theme="light"] {
@@ -9,16 +10,18 @@ html[data-theme="light"] {
   --primary: #4a638c;
   --secondary: #97adc3;
   --accent: #6457a2;
+  --btn: #cecdd6;
 }
 
 /* dark theme */
 html[data-theme="dark"] {
   color-scheme: dark;
   --text: #e0e0e0;
-  --background: #090e1b;
+  --background: #14151A;
   --primary: #738cb5;
   --secondary: #3c5268;
   --accent: #695da8;
+  --btn: #2b2a33;
 }
 
 /* Dark theme (system preference) */
@@ -26,45 +29,221 @@ html[data-theme="dark"] {
   html:not([data-theme]) {
     color-scheme: dark;
     --text: #e0e0e0;
-    --background: #090e1b;
+    --background: #14151A;
     --primary: #738cb5;
     --secondary: #3c5268;
     --accent: #695da8;
+    --btn: #2b2a33;
   }
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-  border: 1px solid red;
+.flex-grid {
+  display: inline-block;
+  .col {
+    flex: 1;
+    width: 50%;
+    margin-bottom: auto;
+  }
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: var(--text);
+  background-color: var(--primary);
+  cursor: pointer;
+  display: inline-flex;
+  margin: auto;
+  padding: 16px 16px 16px 16px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.social-button {
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: var(--primary);
+  background-color: var(--btn);
+  cursor: pointer;
+  display: inline-flex;
+  margin: auto;
+  padding: 17px 18px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.two-column {
+  column-count: 2;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Open Sans';
   font-weight: 400;
-  margin:0 auto;
   color: var(--text);
   background-color: var(--background);
+  padding-bottom: 22px;
 }
+
+/* BREAKPOINTS */
+/* xs */
+@media (min-width: 0px) {
+  body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .flex-grid {
+    display: block;
+    .col {
+      width: 100%;
+    }
+  }
+}
+/* sm */
+@media (min-width: 576px) {
+  body{ 
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .flex-grid {
+    display: flex;
+    .col {
+      flex: 1;
+      width: 50%;
+    }
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  body{ 
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .container {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* lg */
+@media (min-width: 992px) {
+  body{ 
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .container {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* xl */
+@media (min-width: 1200px) {
+  body{ 
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .container {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* xxl */
+@media (min-width: 1400px) {
+  body{ 
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .container {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.topnav {
+  display: flex;
+  font-family: 'Oswald';
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-family: 'Open Sans';
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: var(--background);
+}
+
+.topnav .title {
+  font-size: 3.366rem;
+  margin-right: auto;
+}
+
+.topnav .links {
+  font-size: 2.525rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+ @media screen and (max-width: 576px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 576px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} 
 
 h1, h2, h3, h4, h5 {
   font-family: 'Oswald';
@@ -74,15 +253,28 @@ h1, h2, h3, h4, h5 {
 }
 
 html {font-size: 100%;} /* 16px */
+h1 {font-size: 3.366rem; /* 53.92px */}
+h2 {font-size: 2.525rem; /* 40.32px */}
+h3 {font-size: 1.894rem; /* 30.24px */}
+h4 {font-size: 1.421rem; /* 22.72px */}
+h5 {font-size: 1.066rem; /* 17.12px */}
+small {font-size: 0.600rem; /* 9.6px */}
 
-h1 {font-size: 4.521rem; /* 72.32px */}
+u {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
 
-h2 {font-size: 3.197rem; /* 51.2px */}
+a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
 
-h3 {font-size: 2.261rem; /* 36.16px */}
+b {
+  color: var(--primary);
+}
 
-h4 {font-size: 1.599rem; /* 25.6px */}
-
-h5 {font-size: 1.131rem; /* 18.08px */}
-
-small {font-size: 0.566rem; /* 9.12px */}
+footer {
+  position: absolute;
+  width: 100%;
+}
